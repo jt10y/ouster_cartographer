@@ -1,0 +1,10 @@
+digraph G {
+"os_sensor" -> "os_imu"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1617988004.985 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "os_sensor"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1617988004.985 sec old)\nBuffer length: 0.000 sec\n"];
+"os_sensor" -> "os_lidar"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1617988004.985 sec old)\nBuffer length: 0.000 sec\n"];
+"map" -> "base_link"[label="Broadcaster: /cartographer_node\nAverage rate: 103.266 Hz\nMost recent transform: 1617988004.952 ( 0.033 sec old)\nBuffer length: 4.939 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1617988004.985"[ shape=plaintext ] ;
+ }->"map";
+}

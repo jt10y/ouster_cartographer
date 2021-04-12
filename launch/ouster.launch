@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find ouster_ros)/ouster.launch" >
+
+    <arg name="sensor_hostname"  value="169.254.149.190"/>
+    <arg name="udp_dest"  value="192.168.119.4"/>
+    <arg name="metadata"  value="/home/taojin/catkin_ws/src/slam/calibration_meta.json"/>
+    <arg name="lidar_mode"  value="2048x10"/>
+    <arg name="viz"  value="false"/>
+
+  </include>
+
+</launch>
